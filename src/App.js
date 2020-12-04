@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import MarkList from './components/Marks/Marks'
+import React, { Component } from 'react';
+import MarkList from './components/Marks/Marks';
 
 // class App extends Component {
 //    state = {
@@ -10,11 +10,9 @@ import MarkList from './components/Marks/Marks'
 //     <MarkList/>
 // }
 const App = () => (
-    <>
-        
-        <MarkList />
-        
-    </>
+  <>
+    <MarkList />
+  </>
 );
 
 export default App;
