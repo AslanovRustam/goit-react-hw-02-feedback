@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './marks.module.css';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 
-class MarkList extends React.Component {
+class App extends React.Component {
   state = {
     good: 0,
     neutral: 0,
@@ -35,7 +36,12 @@ class MarkList extends React.Component {
     return (
       <div>
         <h1>Please leave feedback</h1>
-        <div>
+        <FeedbackOptions
+          onClickGood={this.onClickGood}
+          onClickNeutral={this.onClickNeutral}
+          onClickBad={this.onClickBad}
+        />
+        {/* <div>
           <button className={s.button} type="button" onClick={this.onClickGood}>
             good
           </button>
@@ -49,7 +55,7 @@ class MarkList extends React.Component {
           <button className={s.button} type="button" onClick={this.onClickBad}>
             bad
           </button>
-        </div>
+        </div> */}
         <div>
           <h1>Statistics</h1>
           <p>
@@ -74,4 +80,4 @@ class MarkList extends React.Component {
   }
 }
 
-export default MarkList;
+export default App;
